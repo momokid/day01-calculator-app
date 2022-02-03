@@ -1,19 +1,21 @@
 //Return list of all keys
 const keys = document.querySelectorAll(".key");
-const mainDisplay = document.querySelector('.display');
+const displayInput = document.querySelector('.displayInput');
+const displayResult = document.querySelector('.displayResults');
+
 let values = [];
 
 //Get the value of the key clicked
 for (const key of keys) {
   key.addEventListener("click", () => {
     
-    try {
-      const keyPressed = key.attributes['value'].value;
-      displayPressedKey(keyPressed)
+    const keyPressed = key.attributes['value'].value;
       
-    } catch (error) {
-      console.log("An error has been encountered ", error);
-    }
+      if(keyPressed ==='C' || keyPressed ==='del'){
+          return false;
+      }
+      displayPressedKey(keyPressed)
+
   });
 }
 
@@ -22,7 +24,12 @@ const clearScreen= function (){
     mainDisplay.innerHTML=""
 }
 
+//Clear the displayed result
+const clearDisplayResults = ()=>{
+    displayResult.innerHTML = ""
+}
+
 //Display selected value
 const displayPressedKey = (key)=>{
-    mainDisplay.innerHTML += " "+key
+    displayInput.innerHTML += key
 }

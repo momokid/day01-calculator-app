@@ -13,6 +13,20 @@
     height: 180px;
     color: white;
     padding: 15px 10px;
+    font-size: 24px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.displayInput{
+    height: 60px;
+    width: 95%;
+}
+.displayResults{
+    height: 100px;
+    width: 95%;
+    text-align: right;
 }
 .keypads{
     background-color: rgb(55, 55, 55);
