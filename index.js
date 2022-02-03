@@ -24,6 +24,12 @@ const clearScreen= function (){
     mainDisplay.innerHTML=""
 }
 
+//Clear the display input
+const clearDisplayInput = ()=>{
+    displayInput.innerHTML = ""
+}
+
+
 //Clear the displayed result
 const clearDisplayResults = ()=>{
     displayResult.innerHTML = ""
