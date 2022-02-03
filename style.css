@@ -1,0 +1,50 @@
+.container{
+    width: 400px;
+    height: 600px;
+    margin: 20px auto;
+    background-color: black;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+.display{
+    width: inherit;
+    height: 180px;
+    color: white;
+    padding: 15px 10px;
+}
+.keypads{
+    background-color: rgb(55, 55, 55);
+    height: 440px;
+    width: inherit;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+.keypads-section{
+    height: 73.33px;
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+}
+.key{
+    width: 100px;
+    height: inherit;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 28px;
+    cursor: pointer;
+    transition:all 0.5s ease-in-out;
+}
+.key:hover{
+    background-color: black;
+    color: wheat;
+}
+.equal-sign{
+    height: 146.66px;
+    background-color: green;
+    font-size: 44px;
+}
