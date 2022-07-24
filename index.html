@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator App</title>
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="display">
-            <div class="displayInput"></div>
-            <div class="displayResults"></div>
+      <div class="display">
+        <div class="displayInput">2+2</div>
+        <div class="displayResults">4</div>
+      </div>
+      <div class="keypads">
+        <div class="keypads-section">
+          <div class="key" value="C" onclick="clearDisplayInput()">C</div>
+          <div class="key" value="/">÷</div>
+          <div class="key operand" value="*">x</div>
+          <div class="key" value="del">DEL</div>
         </div>
-        <div class="keypads">
-            <div class="keypads-section">
-                <div class="key" value='C' onclick="clearDisplayInput()">C</div>
-                <div class="key" value='/'>÷</div>
-                <div class="key operand" value='*'>x</div>
-                <div class="key" value='del'>DEL</div>
-            </div>
-            <div class="keypads-section">
-                <div class="key" value='7'>7</div>
-                <div class="key" value='8'>8</div>
-                <div class="key" value='9'>9</div>
-                <div class="key operand" value='-'>-</div>
-            </div>
-            <div class="keypads-section">
-                <div class="key" value='4'>4</div>
-                <div class="key" value='5'>5</div>
-                <div class="key" value='6'>6</div>
-                <div class="key operand" value='+'>+</div>
-            </div>
-            <div class="keypads-section">
-                <div class="key" value='1'>1</div>
-                <div class="key" value='2'>2</div>
-                <div class="key" value='3'>3</div>
-                <div class="key operand equal-sign" value='='>=</div>
-            </div>
-            <div class="keypads-section">
-                <div class="key" value='%'>%</div>
-                <div class="key" value='0'>0</div>
-                <div class="key" value='.'>.</div>
-            </div>
-            <div class="keypads-section">
-                <div class="key">◀️</div>
-                <div class="key">⏹️</div>
-                <div class="key">▶️</div>
-                <div class="key" onClick='clearScreen()'>©️</div>
-            </div>
+        <div class="keypads-section">
+          <div class="key" value="7">7</div>
+          <div class="key" value="8">8</div>
+          <div class="key" value="9">9</div>
+          <div class="key operand" value="-">-</div>
         </div>
+        <div class="keypads-section">
+          <div class="key" value="4">4</div>
+          <div class="key" value="5">5</div>
+          <div class="key" value="6">6</div>
+          <div class="key operand" value="+">+</div>
+        </div>
+        <div class="keypads-section">
+          <div class="key" value="1">1</div>
+          <div class="key" value="2">2</div>
+          <div class="key" value="3">3</div>
+          <div class="key operand equal-sign" value="=">=</div>
+        </div>
+        <div class="keypads-section">
+          <div class="key" value="%">%</div>
+          <div class="key" value="0">0</div>
+          <div class="key" value=".">.</div>
+        </div>
+        <div class="keypads-section">
+          <div class="key">◀️</div>
+          <div class="key">⏹️</div>
+          <div class="key">▶️</div>
+          <div class="key" onClick="clearScreen()">©️</div>
+        </div>
+      </div>
     </div>
 
+    <footer>
+      <a href="https://github.com/momokid" target="_blank">
+        <i class="fa-brands fa-github-alt"></i>
+      </a>
+      <a href="https://github.com/momokid" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/momokid" target="_blank">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+    </footer>
+
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

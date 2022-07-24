@@ -1,64 +1,84 @@
-.container{
-    width: 400px;
-    height: 600px;
-    margin: 20px auto;
-    background-color: black;
-    border-radius: 10px;
+.container {
+  width: 400px;
+  height: 600px;
+  margin: 20px auto;
+  background-color: black;
+  border-radius: 10px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.display{
-    width: inherit;
-    height: 180px;
-    color: white;
-    padding: 15px 10px;
-    font-size: 24px;
+.display {
+  width: inherit;
+  height: 180px;
+  color: white;
+  padding: 15px 10px;
+  font-size: 24px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.displayInput{
-    height: 60px;
-    width: 95%;
+.displayInput {
+  height: 50px;
+  width: 95%;
+  text-align: right;
 }
-.displayResults{
-    height: 100px;
-    width: 95%;
-    text-align: right;
+.displayResults {
+  height: 50px;
+  width: 95%;
+  text-align: right;
 }
-.keypads{
-    background-color: rgb(55, 55, 55);
-    height: 440px;
-    width: inherit;
-    border-bottom-left-radius: inherit;
-    border-bottom-right-radius: inherit;
+.keypads {
+  background-color: rgb(55, 55, 55);
+  height: 440px;
+  width: inherit;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
 }
-.keypads-section{
-    height: 73.33px;
-    width: inherit;
-    display: flex;
-    flex-direction: row;
+.keypads-section {
+  height: 73.33px;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
 }
-.key{
-    width: 100px;
-    height: inherit;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 28px;
-    cursor: pointer;
-    transition:all 0.5s ease-in-out;
+.key {
+  width: 100px;
+  height: inherit;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
 }
-.key:hover{
-    background-color: black;
-    color: wheat;
+.key:hover {
+  background-color: black;
+  color: wheat;
 }
-.equal-sign{
-    height: 146.66px;
-    background-color: green;
-    font-size: 44px;
+.equal-sign {
+  height: 146.66px;
+  background-color: green;
+  font-size: 44px;
+}
+footer {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px auto;
+  color: green;
+  font-size: 2rem;
+  width: 40%;
+}
+
+footer a {
+  color: black;
+}
+.fa-linkedin {
+  color: #0961b8;
+}
+
+.fa-twitter {
+  color: #1c93e4;
 }
