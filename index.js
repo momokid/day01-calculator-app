@@ -3,7 +3,12 @@ const keys = document.querySelectorAll('.key')
 const displayInput = document.querySelector('.displayInput')
 const displayResult = document.querySelector('.displayResults')
 
-let values = []
+let values = '',
+  operatorSign = '',
+  equalSign = '',
+  calcValues = [],
+  prvTempValue = '',
+  curTempValue = ''
 
 //Get the value of the key clicked
 for (const key of keys) {
@@ -12,31 +17,29 @@ for (const key of keys) {
 
     if (keyPressed === 'C' || keyPressed === 'del') {
       return false
+    } else if (keyPressed === '+' || keyPressed === '*') {
+      operatorSign = keyPressed
+      prvTempValue = curTempValue
+      displayResult.textContent = `${curTempValue} ${operatorSign}`
+      curTempValue = ''
+      return false
+    } else if (keyPressed === '=') {
+      displayResult.textContent = `${prvTempValue} ${operatorSign} ${curTempValue}`
+      let results = operate(operatorSign, prvTempValue, curTempValue)
+      displayInput.textContent = results
+      calcValues.push(results)
+      return false
     }
+    // alert(`${keyPressed} and ${operatorSign}`)
     displayPressedKey(keyPressed)
   })
 }
 
 //Clear screen
 const clearDisplayInput = function () {
+  curTempValue = ''
   displayInput.textContent = ''
   displayResult.textContent = ''
-}
-
-// //Clear the display input
-// const clearDisplayInput = () => {
-//   displayInput.textContent = ''
-//   displayInput.textContent = ''
-// }
-
-// //Clear the displayed result
-// const clearDisplayResults = () => {
-//   displayResult.textContent = ''
-// }
-
-//Display selected value
-const displayPressedKey = (key) => {
-  displayInput.innerHTML += key
 }
 
 //Basic functionality of the calculator
@@ -63,23 +66,8 @@ function division() {
 
 //Operator function
 function operate(operator, a, b) {
-  let result
-  //   switch (operator) {
-  //     case '+':
-  //       result = add(a, b)
-  //       break
-  //     case '-':
-  //       result = subtract(a, b)
-  //       break
-  //     case '*':
-  //       result = multiply(a, b)
-  //       break
-  //     case '/':
-  //       result = division(a, b)
-  //       break
-  //     default:
-  //       result = 'Inpurt Error'
-  //   }
+  a = parseFloat(a)
+  b = parseFloat(b)
 
   if (operator === '+') {
     return add(a, b)
@@ -90,4 +78,12 @@ function operate(operator, a, b) {
   } else if (operator === '/') {
     return division(a, b)
   }
+}
+
+//Display selected value
+const displayPressedKey = (key) => {
+  curTempValue += key
+  displayInput.textContent = curTempValue
+
+  return curTempValue
 }
